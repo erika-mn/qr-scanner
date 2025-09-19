@@ -59,22 +59,37 @@ const ScanPage: React.FC = () => {
     }, [navigate]);
 
     return (
-        <div className='flex flex-col w-full h-screen'>
-            <h1 className='bg-blue-600 text-white font-semibold text-lg p-7'>
-                Scan QR
-            </h1>
-            <video
-                ref={videoRef}
-                style={{
-                    width: '100%',
-                    height: 'calc(100vh - 60px)',
-                    objectFit: 'cover',
-                }}
-                playsInline
-                autoPlay
-                muted
-            />
-            <CornerFrame />
+        <div
+            className='flex flex-col w-full h-screen'
+            role='main'
+            aria-label='QR Code scanning page'
+        >
+            <header
+                className='bg-blue-600 text-white font-semibold text-lg p-7'
+                role='banner'
+            >
+                <h1 id='scan-heading'>Scan QR</h1>
+            </header>
+
+            <section
+                role='region'
+                aria-labelledby='scan-heading'
+                className='relative flex-1'
+            >
+                <video
+                    ref={videoRef}
+                    style={{
+                        width: '100%',
+                        height: 'calc(100vh - 60px)',
+                        objectFit: 'cover',
+                    }}
+                    playsInline
+                    autoPlay
+                    muted
+                    aria-label='Live camera preview for scanning QR codes'
+                />
+                <CornerFrame aria-hidden='true' />
+            </section>
         </div>
     );
 };

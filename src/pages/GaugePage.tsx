@@ -34,7 +34,7 @@ const GaugePage: React.FC = () => {
                 <div className='relative z-20'>
                     <SocketOverlay
                         className={`absolute 
-                            h-[34.5rem] top-[6.5rem] right-[5.8rem] -translate-x-1/2 scale-x-125 
+                            h-[34.7rem] top-[6.5rem] right-[5.8rem] -translate-x-1/2 scale-x-125 
                             xxs:h-[35rem] xxs:top-[6rem] xxs:right-[7.5rem]
                             xs:top-[6rem] xs:right-[9rem]
                             md:-translate-x-[17rem] md:top-[6rem] md:-left-1
